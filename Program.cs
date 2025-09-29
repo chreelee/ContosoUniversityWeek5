@@ -36,7 +36,7 @@ namespace ContosoUniversity
                 var services = scope.ServiceProvider;
 
                 var context = services.GetRequiredService<SchoolContext>();
-                context.Database.EnsureCreated();
+                // removed per tutorial context.Database.EnsureCreated();
                 DbInitializer.Initialize(context);
             }
 
